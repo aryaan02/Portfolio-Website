@@ -80,7 +80,6 @@ a::hover {
     margin: 15% auto auto;
     font-size: 6rem;
     max-width: 100%;
-
 }
 
 .small-heading {
@@ -102,15 +101,15 @@ a::hover {
 }
 
 .intro h2 span.cursor.typing {
-  animation: none;
+    animation: none;
 }
 
 @keyframes blink {
-  0%  { background-color: #395B64; }
-  49% { background-color: #395B64; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
-  100%  { background-color: #395B64; }
+    0%  { background-color: #395B64; }
+    49% { background-color: #395B64; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #395B64; }
 }
 
 /* Title Section */
@@ -231,6 +230,8 @@ a::hover {
 .card-deck {
     padding-left: 100px;
     padding-right: 100px;
+    margin-left: -15px; /* Align card margins */
+    margin-right: -15px; /* Align card margins */
 }
 
 @media (max-width: 575.98px) {
@@ -241,7 +242,18 @@ a::hover {
 }
 
 .card {
-    margin-top: 40px;
+    margin: 20px; /* Space between individual cards */
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+}
+
+.card-body {
+    flex-grow: 1; /* Takes up remaining space in the card */
+}
+
+.card-footer {
+    margin-top: auto; /* Pushes footer to the bottom of the card */
 }
 
 .card p {
